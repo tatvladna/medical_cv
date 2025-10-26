@@ -1,4 +1,3 @@
-# training_pipeline.py
 import logging
 import os
 import optuna

@@ -1,4 +1,3 @@
-# evaluation.py
 import logging
 import os
 import numpy as np
@@ -8,7 +7,6 @@ from ultralytics import YOLO
 from sklearn.metrics import roc_curve, auc
 import matplotlib.pyplot as plt
 
-# Импортируем нашу конфигурацию
 import src.config as config
 
 def evaluate_valset():

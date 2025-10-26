@@ -1,4 +1,3 @@
-# prepare_dataset.py
 import os
 import random
 import shutil
