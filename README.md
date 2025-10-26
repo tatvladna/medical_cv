@@ -79,6 +79,15 @@ scale=trial.suggest_float('scale', 0.1, 0.9),
 fliplr=trial.suggest_float('fliplr', 0.0, 0.5),
 ```
 
+## Результаты на валидационном наборе данных
+
+mAP50-90(M):
+Наилучшие гиперпараметры:
+ROC AUC:
+
+
+## Результаты тестирования
+
 
 
 ## Установка зависимостей
@@ -101,6 +110,7 @@ fliplr=trial.suggest_float('fliplr', 0.0, 0.5),
 <div align="center">
   <img src="https://api.visitorbadge.io/api/visitors?path=https://github.com/tatvladna/medical_cv&label=Repository%20Views&countColor=%23263759"/>
 </div>
+
 
 
 
