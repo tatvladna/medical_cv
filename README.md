@@ -79,9 +79,9 @@ scale=trial.suggest_float('scale', 0.1, 0.9),
 fliplr=trial.suggest_float('fliplr', 0.0, 0.5),
 ```
 
-------
 
-**Установка зависимостей**
+
+## Установка зависимостей
 
 * conda create --name env_medcv
 * conda activate env_medcv
@@ -90,7 +90,7 @@ fliplr=trial.suggest_float('fliplr', 0.0, 0.5),
 **Единожды запустить создания набора данных для yolo**
 
 
-**Запуск обучения**
+## Запуск обучения
 
 * python main.py
 
@@ -101,5 +101,6 @@ fliplr=trial.suggest_float('fliplr', 0.0, 0.5),
 <div align="center">
   <img src="https://api.visitorbadge.io/api/visitors?path=https://github.com/tatvladna/medical_cv&label=Repository%20Views&countColor=%23263759"/>
 </div>
+
 
 
