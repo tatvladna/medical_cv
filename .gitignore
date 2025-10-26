@@ -1,0 +1,16 @@
+./photo
+./labels
+*.yaml
+.vscode
+/logs
+*.log
+__pycache__
+*.pt
+.env
+*.jpeg
+*.png
+/labels
+/dataset_yolo
+/optuna_plots
+/yolov8m_med_final
+/photo
