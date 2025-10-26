@@ -8,7 +8,6 @@ __pycache__
 *.pt
 .env
 *.jpeg
-*.png
 /labels
 /dataset_yolo
 /optuna_plots
