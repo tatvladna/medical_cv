@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=tatvladna&repo=medical_cv&style=flat-square&color=blue" alt="Repository views"/>
+  <img src="https://hitsofcode.com/github/tatvladna/medical_cv?view=flat-square" alt="Hits of Code"/>
 </div>
 
 
