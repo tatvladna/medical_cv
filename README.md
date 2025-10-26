@@ -81,19 +81,30 @@ fliplr=trial.suggest_float('fliplr', 0.0, 0.5),
 
 ## Результаты на валидационном наборе данных
 
-**mAP50-90(M):**
 
 **Наилучшие гиперпараметры:**
 
-**ROC AUC:**
-
+```
+{'lr0': 0.0006110260730790828,
+'momentum': 0.8141900389064289,
+'weight_decay': 0.00028521318515515025,
+'degrees': 7.237673966070879,
+'translate': 0.13433775410561435,
+'scale': 0.10211474979069213,
+'fliplr': 0.17677797469602924}
+```
+**ROC_AUC**: 0.9756
 
 ## Результаты тестирования
 
-**ROC AUC**
+**ROC AUC**: 0.7712
 
-**Сводная таблица**
-
+```
+Матрица ошибок:
+                  Predicted Normal  Predicted Pathology
+Actual Normal                   49                    1
+Actual Pathology                22                   28
+```
 
 ## Установка зависимостей
 
@@ -115,6 +126,7 @@ fliplr=trial.suggest_float('fliplr', 0.0, 0.5),
 <div align="center">
   <img src="https://api.visitorbadge.io/api/visitors?path=https://github.com/tatvladna/medical_cv&label=Repository%20Views&countColor=%23263759"/>
 </div>
+
 
 
 
