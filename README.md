@@ -18,7 +18,7 @@
 1. ОС: Ubuntu
 2. VRAM: 24Гб (использовалась одна GPU NVIDIA)
 
-Итог: было ограничение по времени и мощностям
+**Итог:** было ограничение по времени и мощностям
 
 
 ## Описание исходных данных
@@ -81,13 +81,18 @@ fliplr=trial.suggest_float('fliplr', 0.0, 0.5),
 
 ## Результаты на валидационном наборе данных
 
-mAP50-90(M):
-Наилучшие гиперпараметры:
-ROC AUC:
+**mAP50-90(M):**
+
+**Наилучшие гиперпараметры:**
+
+**ROC AUC:**
 
 
 ## Результаты тестирования
 
+**ROC AUC**
+
+**Сводная таблица**
 
 
 ## Установка зависимостей
@@ -110,6 +115,7 @@ ROC AUC:
 <div align="center">
   <img src="https://api.visitorbadge.io/api/visitors?path=https://github.com/tatvladna/medical_cv&label=Repository%20Views&countColor=%23263759"/>
 </div>
+
 
 
 
