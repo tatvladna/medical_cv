@@ -16,6 +16,9 @@
 * conda activate env_medcv
 * pip install requirements.txt
 
+**Единожды запустить создания набора данных для yolo**
+
+
 **Запуск обучения**
 
 * python main.py
@@ -29,6 +32,7 @@
 <div align="center">
   <img src="https://api.visitorbadge.io/api/visitors?path=https://github.com/tatvladna/medical_cv&label=Repository%20Views&countColor=%23263759"/>
 </div>
+
 
 
 
