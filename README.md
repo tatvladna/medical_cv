@@ -1,4 +1,4 @@
-# Чемпионат "Будущее медицины"                   ![logo](./img/med.png)   
+# Чемпионат "Будущее медицины"                                                                                        ![logo](./img/med.png)   
 
 ![RSMU logo](./img/rsmu.png)
 
@@ -17,6 +17,8 @@
 
 1. ОС: Ubuntu
 2. VRAM: 24Гб (использовалась одна GPU NVIDIA)
+
+**Итог:** было ограничение по времени и мощностям
 
 
 ## Описание исходных данных
@@ -48,15 +50,52 @@ max    2496.000000  2496.000000
 ```
 
 
-## Выбор модели 
+## Выборанные характеристики
 
-Была выбрала модель yolov8m. Которая балансирует между точностью и потребляемыми ресурсами.
+1. Была выбрала модель yolov8m-seg.pt . Которая балансирует между точностью и потребляемыми ресурсами.
+2. Данные были разделена 90/10 = train/validation
+3. Задача хакатона - сегментация. Было решено привести все изображения привести к единому масштабу с IMG_SIZE=1024. Чтобы не терять качество некоторых объектов. Статистика по размерам изображений говорит о том, что 1024 - минимальная ширина.
 
-##
-  
-------
+```
+IMG_SIZE=1024
+BASELINE_EPOCHS=10
+EPOCHS_OPTUNA=30
+EPOCHS_FINAL=100
+N_TRIALS=40
+BATCH_SIZE=16
+```
 
-**Установка зависимостей**
+## Оптимизация гиперпараметров
+
+Была произведена оптимизация гиперпаметров с помощь БО (optuna): максимизация seg.map.
+
+```
+lr0=trial.suggest_float('lr0', 1e-5, 1e-1, log=True),
+momentum=trial.suggest_float('momentum', 0.8, 0.98),
+weight_decay=trial.suggest_float('weight_decay', 1e-5, 1e-2, log=True),
+degrees=trial.suggest_float('degrees', 0.0, 45.0),
+translate=trial.suggest_float('translate', 0.0, 0.3),
+scale=trial.suggest_float('scale', 0.1, 0.9),
+fliplr=trial.suggest_float('fliplr', 0.0, 0.5),
+```
+
+## Результаты на валидационном наборе данных
+
+**mAP50-90(M):**
+
+**Наилучшие гиперпараметры:**
+
+**ROC AUC:**
+
+
+## Результаты тестирования
+
+**ROC AUC**
+
+**Сводная таблица**
+
+
+## Установка зависимостей
 
 * conda create --name env_medcv
 * conda activate env_medcv
@@ -65,7 +104,7 @@ max    2496.000000  2496.000000
 **Единожды запустить создания набора данных для yolo**
 
 
-**Запуск обучения**
+## Запуск обучения
 
 * python main.py
 
@@ -76,3 +115,9 @@ max    2496.000000  2496.000000
 <div align="center">
   <img src="https://api.visitorbadge.io/api/visitors?path=https://github.com/tatvladna/medical_cv&label=Repository%20Views&countColor=%23263759"/>
 </div>
+
+
+
+
+
+
