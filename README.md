@@ -16,7 +16,7 @@
 ##  Описание ресурсов, используемых для разработки решения
 
 1. ОС: Ubuntu
-2. VRAM: 24Гб
+2. VRAM: 24Гб (использовалась одна видеокарта)
 
 
 ## Описание исходных данных
@@ -75,6 +75,7 @@ max    2496.000000  2496.000000
 <div align="center">
   <img src="https://api.visitorbadge.io/api/visitors?path=https://github.com/tatvladna/medical_cv&label=Repository%20Views&countColor=%23263759"/>
 </div>
+
 
 
 
